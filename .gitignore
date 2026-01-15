@@ -1,0 +1,49 @@
+# Maven build output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+
+# IDE - IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+
+# IDE - NetBeans
+nbproject/
+.nb-gradle/
+.ntp/
+
+# OS files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Miscellaneous
+*.log
+*.swp
+*.swo
+*~
+.tmp/
+    
