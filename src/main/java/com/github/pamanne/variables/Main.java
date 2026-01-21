@@ -19,6 +19,8 @@ public class Main {
         System.out.println(firstNum + " * " + secondNum + " = " +(firstNum * secondNum));
         System.out.println(firstNum + " / " + secondNum + " = " +(firstNum / secondNum));
         System.out.println(firstNum + " % " + secondNum  + " = "  +(firstNum % secondNum));
+
+        scanner.close();
         
     }
     

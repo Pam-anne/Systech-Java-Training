@@ -7,7 +7,7 @@ public class Ternary {
         int b=++x;
         int c = x++;
         int d= (a<b) ? (a<c) ? a: (b<c) ? b:c :x;
-        System.out.println(b);
+        System.out.println(d);
         
     }
     // public String message(){

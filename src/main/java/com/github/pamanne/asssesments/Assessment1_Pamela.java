@@ -1,6 +1,6 @@
 // Pamela Abaki
 
-package com.github.pamanne;
+package com.github.pamanne.asssesments;
 
 import java.util.Scanner;
 
