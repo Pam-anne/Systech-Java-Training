@@ -52,9 +52,9 @@ public class BankAccount {
 
     public void displayBalance(){
         System.out.println("======= ACCOUNT DETAILS =======");
-        System.out.println("   Account : " + accountNumber);
-        System.out.println("   Owner: " + accountHolder);
-        System.out.println("   Balance: Ksh" + balance);
+        System.out.println("Account : " + accountNumber);
+        System.out.println("Owner: " + accountHolder);
+        System.out.println("Balance: Ksh" + balance);
         System.out.println();
 
         
