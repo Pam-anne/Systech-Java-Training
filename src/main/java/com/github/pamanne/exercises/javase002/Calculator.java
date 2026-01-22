@@ -1,8 +1,8 @@
-package com.github.pamanne.variables;
+package com.github.pamanne.exercises.javase002;
 
 import java.util.Scanner;
 
-public class Main {
+public class Calculator {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 

@@ -1,4 +1,4 @@
-package com.github.pamanne;
+package com.github.pamanne.exercises.javase001;
 
 public class PersonalIntroduction {
     public static void main(String[] args){

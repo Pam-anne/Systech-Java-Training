@@ -1,10 +1,10 @@
 // Pamela Abaki
 
-package com.github.pamanne.asssesments;
+package com.github.pamanne.asssesments.javase005;
 
 import java.util.Scanner;
 
-public class Assessment1_Pamela {
+public class Assessment1_Pamela_Abaki {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Quiz Problem 1:");

@@ -13,12 +13,12 @@
 * Additional Operations: Modulus
 */
 
-package com.github.pamanne.asssesments;
+package com.github.pamanne.asssesments.javase005;
 
 import java.util.Scanner;
 
 
-public class SimpleCalculator_Pamela {
+public class SimpleCalculator_Pamela_Abaki {
     public static void main(String[] args) {
         System.out.println("  === Simple Calculator === ");
 

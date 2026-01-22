@@ -1,4 +1,4 @@
-package com.github.pamanne.methods;
+package com.github.pamanne.exercises.javase006;
 
 public class TemperatureConverter {
     public static void main(String[] args) {
