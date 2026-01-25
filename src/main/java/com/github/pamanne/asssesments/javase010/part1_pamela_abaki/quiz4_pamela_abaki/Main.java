@@ -1,4 +1,4 @@
-package com.github.pamanne.asssesments.javase010.quiz4_pamela_abaki;
+package com.github.pamanne.asssesments.javase010.part1_pamela_abaki.quiz4_pamela_abaki;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.github.pamanne.asssesments.javase010.quiz4_pamela_abaki;
+package com.github.pamanne.asssesments.javase010.part1_pamela_abaki.quiz4_pamela_abaki;
 
 public class SavingsAccount extends BankAccount{
     private double interestRate;
@@ -16,6 +16,7 @@ public class SavingsAccount extends BankAccount{
     public void setInterestRate(double interestRate){
          if(interestRate < 0) {
             System.out.println("Error: Interest rate cannot be negative");
+            this.interestRate=0.0;
         }
         this.interestRate = interestRate;
 
@@ -35,7 +36,7 @@ public class SavingsAccount extends BankAccount{
     public void applyInterest(){
         double interest = getBalance() * (interestRate/100);
         deposit(interest);
-        System.out.println("Interest of: $"+ interest + " applied");
+        System.out.println("Interest of amount: $"+ interest + " applied");
     }
     
 }

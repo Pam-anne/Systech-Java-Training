@@ -1,4 +1,4 @@
-package com.github.pamanne.asssesments.javase010.quiz2_pamela_abaki;
+package com.github.pamanne.asssesments.javase010.part1_pamela_abaki.quiz2_pamela_abaki;
 
 public class Employee {
     private String name;

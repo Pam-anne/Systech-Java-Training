@@ -1,4 +1,4 @@
-package com.github.pamanne.asssesments.javase010.quiz4_pamela_abaki;
+package com.github.pamanne.asssesments.javase010.part1_pamela_abaki.quiz4_pamela_abaki;
 
 public class BankAccount {
     private String accountNumber;
@@ -41,7 +41,8 @@ public class BankAccount {
     }
     protected void setBalance(double balance){
         if (balance < 0) {
-            System.out.println("Error: Initial balance cannot be negative!");
+            System.out.println("Error: Balance cannot be negative. Setting balance to 0.");
+            this.balance = 0.0;
         }else{
             this.balance =balance;
         }
@@ -53,7 +54,7 @@ public class BankAccount {
             balance +=amount;
             System.out.println("You have deposited: $ "+ amount+" .Your balance is $ "+balance);
         }else{
-            System.out.println("You must deposit amount greter than 0 ");
+            System.out.println("You must deposit amount greater than 0 ");
         }
 
     }
@@ -67,6 +68,7 @@ public class BankAccount {
         }
         
     }
+
 
     public void displayAccountInfo(){
         System.out.println("======= ACCOUNT DETAILS =======");

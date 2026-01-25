@@ -1,4 +1,4 @@
-package com.github.pamanne.asssesments.javase010.quiz4_pamela_abaki;
+package com.github.pamanne.asssesments.javase010.part2_pamela_abaki;
 
 public class CheckingAccount extends BankAccount{
 
@@ -13,19 +13,19 @@ public class CheckingAccount extends BankAccount{
 
     public void setOverdraftLimit(double overdraftLimit){
         if(overdraftLimit < 0) {
-            throw new IllegalArgumentException("Overdraft limit cannot be negative");
+            System.out.println("Overdraft limit cannot be negative");
+            this.overdraftLimit=0.0;
         }
         this.overdraftLimit = overdraftLimit;
     }
 
     @Override
     public void withdraw(double amount) {
-        double currentBalance = getBalance();
         
-        if (amount > currentBalance + overdraftLimit) {
+        if (amount > getBalance()+ overdraftLimit) {
             System.out.println("Exceeds overdraft limit of $" + overdraftLimit);
         } else {
-            setBalance(currentBalance - amount);
+            setBalance(getBalance() - amount);
             super.withdraw(amount);
         }
     }
