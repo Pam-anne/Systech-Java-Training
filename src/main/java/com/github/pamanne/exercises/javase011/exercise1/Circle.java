@@ -1,4 +1,4 @@
-package com.github.pamanne.exercises.javase011;
+package com.github.pamanne.exercises.javase011.exercise1;
 
 public class Circle extends Shape {
     private double radius;

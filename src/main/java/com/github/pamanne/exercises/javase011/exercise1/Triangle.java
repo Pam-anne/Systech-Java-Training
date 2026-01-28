@@ -1,12 +1,12 @@
-package com.github.pamanne.exercises.javase011;
+package com.github.pamanne.exercises.javase011.exercise1;
 
-public class Rectangle extends Shape{
-    private double width;
+public class Triangle extends Shape {
+    private double base;
     private double height;
 
-    public Rectangle(String color,boolean isFilled,double width,double height){
+    public Triangle(String color,boolean isFilled,double base,double height){
         super(color,isFilled);
-        this.width=width;
+        this.base=base;
         this.height=height;
 
     }
@@ -14,18 +14,18 @@ public class Rectangle extends Shape{
 
     @Override
     public double getArea(){
-        double area = width*height;
+        double area = 0.5*base*height;
         System.out.println("Area of the " + color + " rectangle is: "+ area);
         return area;
 
     }
     @Override
     public double getPerimeter(){
-        double perimeter = 2*(width + height);
+        double hypotenuse = Math.sqrt(base * base + height * height);
+        double perimeter = base + height + hypotenuse;
         System.out.println("Perimeter of the " + color + " rectangle is: "+ perimeter);
         return perimeter;
 
     }
-
-   
+    
 }
