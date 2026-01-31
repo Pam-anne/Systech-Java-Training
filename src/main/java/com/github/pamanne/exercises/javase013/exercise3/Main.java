@@ -1,43 +1,47 @@
 package com.github.pamanne.exercises.javase013.exercise3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       Scanner scanner = new Scanner(System.in);
-        Calculator calc = new Calculator();
+        Scanner scanner = new Scanner(System.in);
+        boolean continueCalculation = true;
 
-        try {
-            System.out.print("Enter first number: ");
-            double firstNum = scanner.nextDouble(); 
-            scanner.nextLine();
+        while (continueCalculation) {
+            try {
+                System.out.print("Enter first number: ");
+                double num1 = scanner.nextDouble();
+                scanner.nextLine();
 
-            System.out.print("Enter operator (+, -, *, /): ");
-            String operator = scanner.nextLine();
+                System.out.print("Enter operator (+, -, *, /): ");
+                String operator = scanner.nextLine();
 
-            System.out.print("Enter second number: ");
-            double secondNum = scanner.nextDouble(); 
-            // scanner.nextLine()
+                System.out.print("Enter second number: ");
+                double num2 = scanner.nextDouble();
+                scanner.nextLine();
 
-            double result = switch (operator) {
-                case "+" -> calc.add(firstNum, secondNum);   
-                case "-" -> calc.subtract(firstNum, secondNum);                    
-                case "*" -> calc.multiply(firstNum, secondNum);                    
-                case "/" -> calc.divide(firstNum, secondNum);                  
-                default -> throw new InvalidOperationException("Invalid operator: " + operator);
-            };
+                double result = Calculator.calculate(num1, num2, operator);
+                System.out.println("Result: " + result);
 
-            System.out.println("Result: " + result);
-
-        } catch (NumberFormatException e) {
-            System.out.println("Error: Please enter a valid number!");
-        } catch (InvalidOperationException e) {
-            System.out.println("Operation error: " + e.getMessage());
-        } catch (Exception e) {
-            System.out.println("Unexpected error: " + e.getMessage());
-        } finally {
-            scanner.close();
-            System.out.println("Calculator session ended.");
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Invalid number format. Please enter numeric values.");
+            } catch (InvalidOperationException e) {
+                System.out.println("Error: " + e.getMessage());
+            } catch (ArithmeticException e) {
+                System.out.println("Error: " + e.getMessage());
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            } finally {
+                System.out.print("Do you want to continue? (yes/no): ");
+                String choice = scanner.nextLine().trim().toLowerCase();
+                if (!choice.equals("yes")) {
+                    continueCalculation = false;
+                    System.out.println("Calculator closing....");
+                }
+            }
+            
         }
+        scanner.close();
     }
 }
