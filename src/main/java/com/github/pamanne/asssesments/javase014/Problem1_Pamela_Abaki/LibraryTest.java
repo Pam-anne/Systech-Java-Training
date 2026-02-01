@@ -1,6 +1,6 @@
 package com.github.pamanne.asssesments.javase014.Problem1_Pamela_Abaki;
 
-public class Main {
+public class LibraryTest {
     public static void main(String[] args) {
 
         LibraryItem[] items = {

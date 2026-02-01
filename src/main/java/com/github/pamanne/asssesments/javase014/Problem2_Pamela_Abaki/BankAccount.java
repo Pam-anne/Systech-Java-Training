@@ -5,7 +5,18 @@ public class BankAccount {
     private String accountHolder;
     private double balance;
 
-    public BankAccount(String accountNumber, String accountHolder, double balance) {
+    public BankAccount(String accountNumber, String accountHolder, double balance) throws InvalidAccountException {
+        if (accountNumber == null || accountNumber.trim().isEmpty()) {
+            throw new InvalidAccountException("Account number cannot be empty.");
+        }
+
+        if (accountHolder == null || accountHolder.trim().isEmpty()) {
+            throw new InvalidAccountException("Account holder name cannot be empty.");
+        }
+
+        if (balance < 0) {
+            throw new InvalidAccountException("Initial balance cannot be negative.");
+        }
         this.accountHolder = accountHolder;
         this.accountNumber = accountNumber;
         this.balance = balance;
@@ -70,7 +81,8 @@ public class BankAccount {
         this.balance -= amount;
         targetAccount.balance += amount;
 
-        System.out.println("Transferred: $ " + amount + " from " + this.accountNumber + " to " + targetAccount.accountNumber);
+        System.out.println(
+                "Transferred: $ " + amount + " from " + this.accountNumber + " to " + targetAccount.accountNumber);
         System.out.println(this.accountNumber + " balance: $" + this.balance);
         System.out.println(targetAccount.accountNumber + " balance: $" + targetAccount.balance);
     }
